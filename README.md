@@ -1,3 +1,11 @@
+
+## 安装 react-router-dom
+yarn add react-router-dom
+
+## 安装 sass 使用 scss
+
+使用 sass 安装 sass yarn add sass
+https://create-react-app.dev/docs/adding-a-sass-stylesheet
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
