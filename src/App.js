@@ -1,13 +1,16 @@
 // import "./App.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Login from "./pages/Login";
+import Layout from "@/pages/Layout";
+import Login from "@/pages/Login";
+
+import { Button } from "antd";
 function App() {
   return (
     //路由配置
     <BrowserRouter>
       <div>
+        <Button type="primary">Button</Button>
         {/* 出口 */}
         <Routes>
           {/* 创建路由path和组件对应关系 */}

@@ -1,11 +1,38 @@
+## 安装 craco 能够配置@路径简化路径处理
+
+yarn add -D @craco/craco
+"scripts": {
+"start": "craco start",
+"build": "craco build",
+"test": "craco test",
+"eject": "react-scripts eject"
+},
+接管 package.json
+"scripts": {
+"start": "react-scripts start",
+"build": "react-scripts build",
+"test": "react-scripts test",
+"eject": "react-scripts eject"
+},
+
+### @别名路径提示！！
+vscode的配置
+jsconfig.json
+## 安装 ante
+
+yarn add antd
+import 'antd/dist/antd.css'; 修改为
+import 'antd/dist/antd.min.css';
 
 ## 安装 react-router-dom
+
 yarn add react-router-dom
 
 ## 安装 sass 使用 scss
 
 使用 sass 安装 sass yarn add sass
 https://create-react-app.dev/docs/adding-a-sass-stylesheet
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
