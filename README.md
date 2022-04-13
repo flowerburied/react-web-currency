@@ -1,8 +1,8 @@
+
+## 安装mobx 和 mobx-react-lite
+yarn add mobx mobx-react-lite
 ## 安装axios
-
 yarn add axios
-
-
 ## 修改 react18 报错
 17到18写法的变化
 https://www.cnblogs.com/maxiaocang/p/16087320.html

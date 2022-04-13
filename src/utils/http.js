@@ -22,7 +22,7 @@ http.interceptors.response.use(
   (response) => {
     // 2xx 范围内的状态吗会触发该函数
     // 对响应数据做点什么
-    return response;
+    return response.data;
   },
   (error) => {
     // 超过2xx范围的状态码都会触发该函数

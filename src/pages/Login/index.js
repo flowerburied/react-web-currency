@@ -1,9 +1,29 @@
-import { Card, Form, Input, Button, Checkbox } from "antd";
+import { Card, Form, Input, Button, Checkbox, message } from "antd";
 import logo from "@/assets/01.jpg";
 import "./index.scss";
+
+import { useNavigate } from "react-router-dom";
+// 导入共享文件
+import { useStore } from "@/store";
+
 function Login() {
-  const onFinish = (values) => {
+  const { loginStore } = useStore();
+
+  const navigate = useNavigate();
+
+  const onFinish = async (values) => {
     console.log("Success:", values);
+    await loginStore.getToken({
+      // 13811111111
+      // 246810
+      mobile: values.username,
+      code: values.password,
+    });
+
+    // // 跳转首页
+     navigate("/", { replace: true });
+    // 提示用户
+    message.success("登录成功");
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -37,11 +57,11 @@ function Login() {
                 required: true,
                 message: "请输入手机号!",
               },
-              // {
-              //   pattern: /^1[3-9]\d{9}$/,
-              //   message: "请输入正确的手机号",
-              //   validateTrigger: "onBlur",
-              // },
+              {
+                pattern: /^1[3-9]\d{9}$/,
+                message: "请输入正确的手机号",
+                validateTrigger: "onBlur",
+              },
             ]}
           >
             <Input />
@@ -57,7 +77,7 @@ function Login() {
               },
               {
                 len: 6,
-                message: "请输入密码!",
+                message: "请输入六位数密码!",
                 validateTrigger: "onBlur",
               },
             ]}

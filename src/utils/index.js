@@ -3,7 +3,9 @@
 
 import { http } from "./http";
 
-export { http };
+import { setToken, getToken, removeToken } from "./token";
+
+export { http, setToken, getToken, removeToken };
 
 // 导入的实例写法
 // import {http} from '@/utils'
