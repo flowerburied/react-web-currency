@@ -1,14 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
+import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.scss";
 
-import 'antd/dist/antd.min.css';
+import "antd/dist/antd.min.css";
 
-ReactDOM.render(
+// 修改后的ReactDom方法
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
+  // StrictMode 严格模式
 );

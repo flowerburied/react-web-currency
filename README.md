@@ -1,3 +1,16 @@
+## 安装axios
+
+yarn add axios
+
+
+## 修改 react18 报错
+17到18写法的变化
+https://www.cnblogs.com/maxiaocang/p/16087320.html
+
+严格模式
+https://blog.csdn.net/qq_40314318/article/details/105209873
+https://segmentfault.com/a/1190000040975322
+
 ## 安装 craco 能够配置@路径简化路径处理
 
 yarn add -D @craco/craco
@@ -16,8 +29,10 @@ yarn add -D @craco/craco
 },
 
 ### @别名路径提示！！
-vscode的配置
+
+vscode 的配置
 jsconfig.json
+
 ## 安装 ante
 
 yarn add antd
