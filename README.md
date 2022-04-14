@@ -1,10 +1,38 @@
+## reactRouter默认状态下 并不支持在组件之外完成路由跳转
 
-## 安装mobx 和 mobx-react-lite
+https://github.com/remix-run/react-router/issues/8264
+
+import { createBrowserHistory } from 'history';
+import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
+
+let history = createBrowserHistory();
+
+function App() {
+  return (
+    <HistoryRouter history={history}>
+      // The rest of your app
+    </HistoryRouter>
+  );
+}
+
+history.push("/foo");
+
+来实现
+
+
+## 封装自己 AuthRoute 路由鉴权高阶组件，实现未登录拦截，并跳转登录页面
+AuthComponent.js
+## 安装 mobx 和 mobx-react-lite
+
 yarn add mobx mobx-react-lite
-## 安装axios
+
+## 安装 axios
+
 yarn add axios
+
 ## 修改 react18 报错
-17到18写法的变化
+
+17 到 18 写法的变化
 https://www.cnblogs.com/maxiaocang/p/16087320.html
 
 严格模式
